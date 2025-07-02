@@ -85,7 +85,16 @@ window.onload = function() {
   }
 
   requestAnimationFrame(update);
-  document.addEventListener("keydown", jump);
+document.addEventListener("click", () => {
+  jump({ code: "Space" });
+});
+
+// Mobile (touch screen)
+document.addEventListener("touchstart", () => {
+  jump({ code: "Space" });
+});
+
+
 }
 
 
